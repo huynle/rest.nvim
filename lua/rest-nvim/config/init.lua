@@ -6,9 +6,9 @@ local config = {
   stay_in_current_window_after_split = false,
   skip_ssl_verification = false,
   encode_url = true,
-  pre_curl_fn = function(cmd)
-    return cmd
-  end,
+  -- pre_curl_fn = function(cmd)
+  --   return cmd
+  -- end,
   highlight = {
     enabled = true,
     timeout = 150,
