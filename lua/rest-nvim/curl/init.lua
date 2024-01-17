@@ -283,6 +283,10 @@ M.curl_cmd = function(opts)
   local curl_cmd = format_curl_cmd(res)
 
   send_curl_start_event(opts)
+  local _fn = config.get("pre_curl_fn")
+  if _fn then
+    curl_cmd = _fn(curl_cmd)
+  end
 
   if opts.dry_run then
     if config.get("yank_dry_run") then
